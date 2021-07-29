@@ -1,0 +1,46 @@
+button {
+  position: relative;
+  
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  max-width: 20rem;
+  width: 100%;
+
+  height: 3rem;
+  line-height: 1.5rem;
+
+  border: 0;
+  background: transparent;
+  padding: 1rem 2rem;
+  border-radius: .25rem;
+
+  font-size: 1rem;
+  color: var(--text-bar);
+
+  transition: color .2s;
+  
+
+  &.selected {
+    color: var(--orange);
+  }
+
+  &.selected::after {
+    content: '';
+    height: 2.3rem;
+    width: 2px;
+    position: absolute;
+    top: 0.5rem;
+    left: 13.8rem;
+    background: var(--orange)
+  }
+
+  svg {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    color: var(--orange)
+  }
+}
