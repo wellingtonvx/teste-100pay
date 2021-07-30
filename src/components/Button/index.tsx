@@ -12,7 +12,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({iconName, title, selected, ...rest}: ButtonProps) {
   return (
-    <button type="button" {...(selected && {className:'selected'})}{...rest} >
+    <button className="buttomMenu" type="button" {...(selected && {className:'selected buttomMenu'})}{...rest} >
       <Icon name={iconName === undefined ? 'Dashboard' : iconName} color={ selected ? '#F58B1E' : '#B8B4CC'}/>
       {title}
     </button>

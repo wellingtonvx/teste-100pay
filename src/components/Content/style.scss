@@ -2,7 +2,6 @@
   width: 100%;
   margin: 3rem;
 
-
   > header {
     
     display: flex;
@@ -41,22 +40,13 @@
 
   main.content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     section {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 6rem;
-      
-      div {
-        width: 25rem;
-        border: 1px solid #222;
-        background: var(--bg-transacrtion);
-        padding: 1.5rem 2rem;
-        border-radius: 0.25rem;
-        margin-top: 3rem;
-      }
     }
   }
 }

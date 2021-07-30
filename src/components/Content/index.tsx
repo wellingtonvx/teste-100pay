@@ -1,6 +1,8 @@
+import {Graph} from '../Graph'
 import WommanCoddingImg from '../../assets/img/womman.png'
 
 import './style.scss'
+import { CardInfo } from '../CardInfo'
 
 export function Content() {
   return (
@@ -20,59 +22,27 @@ export function Content() {
       </header>
 
       <main className="content">
+
         <section>
-          <div>
-            <header>
-              <p>Saldo disponível </p>
-            </header>
-            <main>
-              <strong>
-              {
-                new Intl.NumberFormat('pt-BR', {
-                style:"currency",
-                currency:"BRL"
-                }).format(685)
-              }
-              </strong>
-              <button>
-                Trasferir
-              </button>
-            </main>
-            <footer>
-              <span>*Valor sujeito a mudança até o final do dia</span>
-            </footer>
-          </div>
+          <CardInfo
+            value={685}
+            buttonValue="Transferir"
+            text="Saldo Disponível"
+            message="*Valor sujeito a mudanças até o final do dia"
+          />
 
-          <div>
-            <header>
-              <p>Saldo A receber </p>
-            </header>
-            <main>
-              <strong>
-              {
-                new Intl.NumberFormat('pt-BR', {
-                style:"currency",
-                currency:"BRL"
-                }).format(20657)
-              }
-              </strong>
-
-              <button>
-                Visualizar detalhes
-              </button>
-            </main>
-            <footer>
-              <span>*Lançamentos previstos para entrar na sua conta</span>
-            </footer>
-
-          </div>
+          <CardInfo 
+            value={202657}
+            buttonValue="Visualizar detalhes"
+            text="Saldo a receber - Abril"
+            message="*Lançamentos previsto a entrar na sua conta"
+          />
         </section>
-        <section>
-          
-        </section>
-      
+       
+        <Graph />
+
       </main>
-
+     
     </div>
   )
 }
