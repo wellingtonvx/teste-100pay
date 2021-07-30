@@ -1,0 +1,38 @@
+.graphContainer{
+  display: flex;
+  flex-direction: column;
+
+  .graphInputs {
+    margin: 1rem 2rem;
+
+    span {
+      margin-right: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    input[type="date"] {
+      background: transparent;
+      border: 0;
+      margin-right: 1.5rem;
+    }
+
+    button {
+      background: transparent;
+      border: 1px solid var(--orange);
+      border-radius: .25rem;
+      color: var(--orange);
+
+      padding: 0.3rem 1rem;
+
+      & + button {
+        margin-left: 1rem;
+      }
+
+      &.selected {
+        background: var(--orange);
+        color: #fff;
+      }
+    }
+  }
+
+}

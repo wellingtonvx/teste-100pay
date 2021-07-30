@@ -1,0 +1,70 @@
+.transactionCardContainer {
+  width: 20rem;
+  height: 30rem;
+  background: #f5f2f2;
+
+  margin: 0 3rem;
+
+  border-radius: 2rem;
+
+
+
+  >span {
+    margin-top: 1rem;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: relative;
+
+    width: 80%;
+    height: 4.5rem;
+    
+    margin: 1rem 0;
+    padding: 1rem;
+
+    background: #fff;
+    border-radius: 0.5rem;
+
+    img {
+      width: 1.5rem;
+      fill:#f8c544;
+    }
+
+    > strong {
+      margin-right: 5rem;
+      font-size: 1rem;
+
+      p {
+        font-size: 0.8rem;
+        color: var(--text-bar);
+      }
+    }
+
+    .price {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+
+      display: flex;
+      align-items: center;
+      justify-content:center;
+
+      width: 35px;
+      height: 15px;
+      
+
+      background: #f8dd9a;
+
+      border-radius: 4px;
+      
+      > strong {
+        font-size: 0.5rem;
+      }
+
+
+    }
+  }
+}

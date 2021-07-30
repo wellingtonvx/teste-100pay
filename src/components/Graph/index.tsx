@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
+
+import './style.scss'
 
 const options = { 
   chart: {
@@ -28,17 +31,42 @@ const series = [
 
 export function Graph(){
 
+  const [isSelected, setIsSelected] = useState(true)
+  const [buttonName, setButtonName] = useState('');
+
+  function handleClickButton(name:string){  
+    setIsSelected(true);
+    setButtonName(name);
+  } 
 
   return (
-    <div>
-      <div>
+    <div className="graphContainer">
+      <div className="graphInputs">
         <span>Filtrar por:</span>
         <input type="date" />
-        <button>Ano</button>
-        <button>Mês</button>
-        <button>Semana</button>
+
+        <button 
+          className={isSelected && buttonName === 'ano' ? 'selected': ''}
+          onClick={ () => handleClickButton('ano')}
+        >
+          Ano
+        </button>
+
+        <button 
+          className={isSelected && buttonName === 'mes' ? 'selected': ''}
+          onClick={ () => handleClickButton('mes')}
+        >
+          Mês
+        </button>
+
+        <button 
+          className={isSelected && buttonName === 'semana' ? 'selected': ''}
+          onClick={ () => handleClickButton('semana')}
+        >
+          Semana
+        </button>
       </div>
-      <ReactApexChart options={options} series={series} type="area" height={350} width={'100%'} />
+      <ReactApexChart options={options} series={series} type="area" height={300} width={'100%'} />
     </div>
   )
 }

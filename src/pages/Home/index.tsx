@@ -1,9 +1,11 @@
 import { Content } from "../../components/Content";
 import { SideBar } from "../../components/SideBar";
 
+import './style.scss'
+
 export function Home(){
   return (
-    <div style={{ display:'flex', flexDirection:'row'}}>
+    <div className="homeContainer">
       <SideBar />
       
       <Content />
