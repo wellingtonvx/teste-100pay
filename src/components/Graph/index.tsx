@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
-import './style.scss'
+import './style.scss';
+import './responsive.scss';
 
 const options = { 
   chart: {
@@ -43,7 +44,7 @@ export function Graph(){
     <div className="graphContainer">
       <div className="graphInputs">
         <span>Filtrar por:</span>
-        <input type="date" />
+        <input type="date" value="2021-07-12"/>
 
         <button 
           className={isSelected && buttonName === 'ano' ? 'selected': ''}
@@ -66,7 +67,7 @@ export function Graph(){
           Semana
         </button>
       </div>
-      <ReactApexChart options={options} series={series} type="area" height={300} width={'100%'} />
+      <ReactApexChart className="graphChart" options={options} series={series} type="area" height={220} />
     </div>
   )
 }

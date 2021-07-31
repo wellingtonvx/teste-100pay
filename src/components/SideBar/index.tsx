@@ -2,7 +2,9 @@ import { useState } from 'react'
 import LogoImg from '../../assets/img/logo.png'
 import Logo2Img from '../../assets/img/logo-sifra-pag-1.png'
 import { Button } from '../Button'
+
 import './style.scss'
+import './responsive.scss'
 
 
 interface OptionProps {

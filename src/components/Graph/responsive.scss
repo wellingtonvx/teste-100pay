@@ -1,0 +1,55 @@
+@media(max-width:1024px) {
+  .graphContainer{
+    margin-top: 3rem;
+      .graphInputs {
+        margin: 1.5rem 2rem;
+        
+        span {
+          margin-right: 1.5rem;
+          font-size: 1.2rem;
+        }
+        
+        button {
+          padding: 0.3rem 0.5rem;
+          
+          & + button {
+            margin-left: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width:768px) {
+    .graphContainer{
+      margin-top: .5rem;
+
+      .graphChart {
+        height: 50px 
+      }
+
+        .graphInputs {
+          margin: .75rem 1rem;
+          
+          span {
+            margin-right: .5rem;
+            font-size: .9rem;
+          }
+
+          input[type="date"] {
+            width: 133px;
+            margin-right: .5rem;
+            padding: 0.1rem 0.3rem;
+          }
+          
+          button {
+            padding: 0.1rem 0.3rem;
+            font-size: .7rem;
+            
+            & + button {
+              margin-left: .5rem;
+            }
+          }
+        }
+      }
+  }

@@ -3,6 +3,7 @@ import { ButtonHTMLAttributes } from 'react'
 import {Icon } from '../Icon'
 
 import './style.scss';
+import './responsive.scss';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;

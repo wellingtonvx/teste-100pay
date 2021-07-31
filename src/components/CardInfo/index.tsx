@@ -1,4 +1,5 @@
 import  './style.scss'
+import './responsive.scss'
 
 interface CardInfoProps {
   value: number;

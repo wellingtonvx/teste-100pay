@@ -1,14 +1,17 @@
 import BoletoImg from  '../../assets/icons/boleto.svg'
 import AssinaturaImg from  '../../assets/icons/usd-circle.svg'
+import HelpImg from '../../assets/img/help.png'
+
 
 import './style.scss';
+import './responsive.scss';
 
 
 const transactions = [
   {
     id:1,
     type: 'Boleto',
-    sender: 'Paula',
+    sender:'Paula',
     plan: 'Plano 2',
     value: 46
   },
@@ -42,7 +45,7 @@ export function TransactionCard(){
 
 
   return (
-    <div className="transactionCardContainer">
+    <div className="transactionCardContainer" >
       <span>Últimas Transações</span>
 
       { transactions.map( transaction => (
@@ -53,12 +56,16 @@ export function TransactionCard(){
             <img src={AssinaturaImg} alt="icone assinatura" />
           )}
 
-         <strong>
-          {transaction.sender}
-          <p>
-            {transaction.plan}
-          </p>
-        </strong>
+          <div>
+              <span>
+                {transaction.sender}
+            
+              </span> 
+              <p>
+                {transaction.plan}
+              </p>
+          </div>
+
 
         <div className="price">
           <strong>
@@ -72,6 +79,8 @@ export function TransactionCard(){
         </div>
       </div>
       ))}
+
+    <img src={HelpImg} alt="Campo de Ajuda" />
     </div>
   )
 }
