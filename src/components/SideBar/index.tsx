@@ -12,42 +12,44 @@ interface OptionProps {
   name: 'Dashboard' | 'Clientes' | 'PIX' | 'Cartão' | 'Boleto' | 'Assinatura' | 'Configuração' | 'Sair';
 }
 
+
+
 export function SideBar(){
 
   const [optionSelected, setOptionSelected] = useState(1)
   const [options, ] = useState<OptionProps[]>([
     {
-      "id": 1,
-      "name": "Dashboard",
+      id: 1,
+      name: "Dashboard",
     },
     {
-      "id": 2,
-      "name": "Clientes",
+      id: 2,
+      name: "Clientes",
     },
     {
-      "id": 3,
-      "name": "PIX",
+      id: 3,
+      name: "PIX",
     },
     {
-      "id": 4,
-      "name": "Cartão",
+      id: 4,
+      name: "Cartão",
     },
     {
-      "id": 5,
-      "name": "Boleto",
+      id: 5,
+      name: "Boleto",
     },
     {
-      "id": 6,
-      "name": "Assinatura",
+      id: 6,
+      name: "Assinatura",
     },
     {
-      "id": 7,
-      "name": "Configuração",
+      id: 7,
+      name: "Configuração",
     },
     {
-      "id": 8,
-      "name": "Sair",
-    }
+      id: 8,
+      name: "Sair",
+    },
   ])
 
 
@@ -56,7 +58,7 @@ export function SideBar(){
   }
 
   return (
-    <nav className="sidebar">
+    <nav className='sidebar'>
       <img src={LogoImg} alt="Logo 100Pay" />
 
       <div className="buttons-container">

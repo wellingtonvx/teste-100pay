@@ -6,9 +6,11 @@ interface CardInfoProps {
   text: string;
   buttonValue: string;
   message: string
+  onOpenTransactionModal: () => void
+  openDetailsModal: () => void
 }
 
-export function CardInfo({value, text, buttonValue, message}:CardInfoProps){
+export function CardInfo({value, text, buttonValue, message, onOpenTransactionModal, openDetailsModal}:CardInfoProps){
 
   return (
     <div className="cardInfoContainer">
@@ -25,7 +27,7 @@ export function CardInfo({value, text, buttonValue, message}:CardInfoProps){
                 }).format(value)
               }
           </strong>
-          <button>
+          <button onClick={buttonValue === 'Transferir' ? onOpenTransactionModal : openDetailsModal}>
             {buttonValue}
           </button>
         </main>

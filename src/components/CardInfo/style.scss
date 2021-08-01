@@ -1,6 +1,6 @@
 div.cardInfoContainer {
   width: 350px;
-  background: #f5f2f2;
+  background: #eeecec;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
   margin-top: 1rem;
@@ -9,7 +9,7 @@ div.cardInfoContainer {
   flex-direction: column;
 
   p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   main {
@@ -21,13 +21,14 @@ div.cardInfoContainer {
     margin: 1rem 0;
 
     strong {
-      color: var(--orange);
+      color: rgb(255, 89, 0);
+      font-size: 1.5rem;
     }
 
     button {
       width: 9rem;
       padding: 0.6rem 0;
-      color: #fff;
+      color: rgb(255, 255, 255);
       background: var(--orange);
 
       margin-left: 1rem;
@@ -35,20 +36,20 @@ div.cardInfoContainer {
       border: 0;
       border-radius: 0.25rem;
 
-      font-size: .7rem;
+      font-size: .8rem;
       font-weight: 700;
 
-      transition: filter .2s;
+      transition: color .2s;
 
       &:hover{
-        filter: brightness(0.9)
+        background: rgb(255, 89, 0);
       }
     }
   }
 
   span {
-    font-size: 0.9rem;
-    color: var(--text-bar)
+    font-size: 1rem;
+    color: rgb(102, 98, 98);
   }
 }
 

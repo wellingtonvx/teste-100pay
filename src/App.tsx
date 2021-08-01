@@ -5,7 +5,7 @@ import './styles/global.scss'
 function App() {
   return (
    <>
-    <Routes/>
+      <Routes/>
    </>
   );
 }

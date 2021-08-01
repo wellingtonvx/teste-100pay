@@ -20,8 +20,8 @@
       button {
         width: 7rem;
         padding: 0.6rem 0;
-        color: #fff;
-        background: var(--orange);
+        color: rgb(255, 255, 255);
+        background: rgb(255, 111, 0);
     
 
         font-size: .5rem;
@@ -37,7 +37,7 @@
   
     span {
       font-size: 0.72rem;
-      color: var(--text-bar)
+      color: rgb(44, 42, 42);
     }
   }
 }
@@ -48,26 +48,88 @@
     padding: 0.5rem 1rem;
     margin-top: .5rem;
     
+    text-align: center;
+
     p {
-      font-size: .9rem;
+      font-size: 1rem;
     }
   
     main {
       margin: .5rem 0;
   
       strong {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
       }
   
       button {
-        width: 5rem;
+        width: 5.5rem;
         padding: 0.5rem 0;
         font-size: .4rem;
       }
     }
   
     span {
-      font-size: 0.5rem;
+      font-size: 0.8rem;
+      color: rgb(44, 42, 42);
     }
   }
+}
+
+@media(max-width:480px){
+  div.cardInfoContainer {
+    width: 180px;
+    height: 120px;
+
+    display: flex;
+    align-items:center;
+    justify-content:center;
+
+    margin: 1rem;
+
+    main {
+  
+      strong {
+        font-size: 1rem;
+      }
+  
+      button {
+        width: 5rem;
+        padding: 0.5rem 0;
+        font-size: .7rem;
+      }
+    }
+
+    span {
+      font-size: 0.9rem;
+      color: rgb(44, 42, 42);
+    }
+  }
+}
+
+
+@media(max-width:375px ){
+  div.cardInfoContainer {
+    width: 170px;
+    height: 110px;
+
+    margin: .5rem;
+
+    main {
+  
+      strong {
+        font-size: .9rem;
+      }
+  
+      button {
+        width: 5rem;
+        padding: 0.5rem 0;
+        font-size: .8rem;
+      }
+    }
+
+    span {
+      font-size: 0.8rem;
+    }
+  }
+
 }

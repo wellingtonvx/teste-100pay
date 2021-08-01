@@ -37,3 +37,16 @@
     }
   }
 }
+
+@media(max-width:480px){
+  .buttomMenu {
+
+    margin-top:1.5rem;
+    font-size: 1.1rem;
+
+    &.selected::after {
+      left: .5rem;
+    }
+
+  }
+}

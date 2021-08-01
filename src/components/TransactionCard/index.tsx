@@ -2,46 +2,18 @@ import BoletoImg from  '../../assets/icons/boleto.svg'
 import AssinaturaImg from  '../../assets/icons/usd-circle.svg'
 import HelpImg from '../../assets/img/help.png'
 
+import { transactions } from '../../assets/transactions'
+
 
 import './style.scss';
 import './responsive.scss';
 
 
-const transactions = [
-  {
-    id:1,
-    type: 'Boleto',
-    sender:'Paula',
-    plan: 'Plano 2',
-    value: 46
-  },
+interface TransactionCardProps {
+  isMobile : boolean
+}
 
-  {
-    id:2,
-    type: 'Boleto',
-    sender: 'Francisco',
-    plan: 'Boleto',
-    value: 756
-  },
-
-  {
-    id:3,
-    type: 'Assinatura',
-    sender: 'Francisco',
-    plan: 'Plano 3',
-    value: 88
-  },
-
-  {
-    id:4,
-    type: 'Assinatura',
-    sender: 'Francisco',
-    plan: 'Plano 2',
-    value: 25
-  },
-]
-
-export function TransactionCard(){
+export function TransactionCard({isMobile}:TransactionCardProps){
 
 
   return (
@@ -59,12 +31,11 @@ export function TransactionCard(){
           <div>
               <span>
                 {transaction.sender}
-            
               </span> 
               <p>
                 {transaction.plan}
               </p>
-          </div>
+        </div>
 
 
         <div className="price">
@@ -80,7 +51,7 @@ export function TransactionCard(){
       </div>
       ))}
 
-    <img src={HelpImg} alt="Campo de Ajuda" />
+     { !isMobile && <img src={HelpImg} alt="Campo de Ajuda" /> }
     </div>
   )
 }

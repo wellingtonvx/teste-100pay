@@ -10,8 +10,8 @@ const options = {
   },
   dataLabels: {
     enabled: false,
-    
   },
+ 
   colors: ["#F58B1E"],
   fill: {
     colors: ['#F58B1E', '#ffc400', '#e62a2a']
@@ -29,8 +29,12 @@ const series = [
 
 ]
 
+interface GraphProps {
+  isOpen: boolean
+  isDetailsModalOpen: boolean
+}
 
-export function Graph(){
+export function Graph({isOpen, isDetailsModalOpen}:GraphProps){
 
   const [isSelected, setIsSelected] = useState(true)
   const [buttonName, setButtonName] = useState('');
@@ -43,8 +47,10 @@ export function Graph(){
   return (
     <div className="graphContainer">
       <div className="graphInputs">
-        <span>Filtrar por:</span>
-        <input type="date" value="2021-07-12"/>
+        <label >
+          Filtrar por:
+          <input type="date"/>  
+        </label>
 
         <button 
           className={isSelected && buttonName === 'ano' ? 'selected': ''}
@@ -67,7 +73,15 @@ export function Graph(){
           Semana
         </button>
       </div>
-      <ReactApexChart className="graphChart" options={options} series={series} type="area" height={220} />
+      <span>Vendas por Ano/2020</span>
+      {
+        isOpen || isDetailsModalOpen ? (
+          <ReactApexChart disabled options={options} series={series} type="area" height={200} />
+        ) : (
+          <ReactApexChart options={options} series={series} type="area" height={200} />
+        )
+
+      }
     </div>
   )
 }

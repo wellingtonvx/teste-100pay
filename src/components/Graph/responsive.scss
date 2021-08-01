@@ -4,7 +4,7 @@
       .graphInputs {
         margin: 1.5rem 2rem;
         
-        span {
+        label {
           margin-right: 1.5rem;
           font-size: 1.2rem;
         }
@@ -31,6 +31,35 @@
         .graphInputs {
           margin: .75rem 1rem;
           
+          label {
+            margin-right: .5rem;
+            font-size: .9rem;
+            
+            input[type="date"] {
+              width: 120px;
+              margin-right: .5rem;
+              padding: 0.1rem 0.3rem;
+            }
+          }
+          
+          button {
+            padding: 0.2rem 0.3rem;
+            font-size: .7rem;
+            
+            & + button {
+              margin-left: .3rem;
+            }
+          }
+        }
+      }
+  }
+
+  @media(max-width:375px) {
+
+    .graphContainer{
+  
+        .graphInputs {
+          
           span {
             margin-right: .5rem;
             font-size: .9rem;
@@ -43,13 +72,14 @@
           }
           
           button {
-            padding: 0.1rem 0.3rem;
+            padding: 0.2rem 0.3rem;
             font-size: .7rem;
             
             & + button {
-              margin-left: .5rem;
+              margin-left: .3rem;
             }
           }
         }
       }
+    
   }
